@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+  <title>{% block title %}{% endblock %}</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+  <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700"
+      rel="stylesheet" />
+
+  <link
+      href="/static/styles.css"
+      rel="stylesheet" />
+</head>
+
+<body
+    class="text-gray-700 bg-white"
+    style="font-family: 'Source Sans Pro', sans-serif">
+  {% include "templates/header.tpl.html"%}
+  {% block content %}
+  {% endblock %}
+  {% include "templates/footer.tpl.html"%}
+</body>
+
+</html>
